@@ -1029,7 +1029,65 @@
             "title": "banner2",
             "icon": "sicon-store",
             "path": "home.banner_2",
-            "fields": []
+            "fields": [
+                {
+                    "id": "banner_last",
+                    "type": "collection",
+                    "format": "collection",
+                    "label": "banner_last",
+                    "description": null,
+                    "labelHTML": null,
+                    "item_label": null,
+                    "icon": "sicon-list-add",
+                    "fields": [
+                        {
+                            "id": "banner_last.Title",
+                            "type": "string",
+                            "format": "text",
+                            "label": "عنوان الصورة",
+                            "description": null,
+                            "labelHTML": null,
+                            "placeholder": "Placeholder text ..",
+                            "icon": "sicon-format-text-alt",
+                            "value": null,
+                            "multilanguage": false,
+                            "required": false,
+                            "minLength": 6,
+                            "maxLength": 30
+                        },
+                        {
+                            "id": "banner_last.description",
+                            "type": "string",
+                            "format": "text",
+                            "label": "وصف الصورة",
+                            "description": null,
+                            "labelHTML": null,
+                            "placeholder": "Placeholder text ..",
+                            "icon": "sicon-format-text-alt",
+                            "value": null,
+                            "multilanguage": false,
+                            "required": false,
+                            "minLength": "3",
+                            "maxLength": 30
+                        },
+                        {
+                            "id": "banner_last.Banner_last.image",
+                            "type": "string",
+                            "format": "image",
+                            "label": "Image",
+                            "description": "حجم الصورة 600 *600",
+                            "labelHTML": null,
+                            "placeholder": "e.g. https://hostname.com/image.png",
+                            "icon": "sicon-image",
+                            "value": null,
+                            "required": true
+                        }
+                    ],
+                    "value": [],
+                    "minLength": 1,
+                    "maxLength": 5
+                }
+            ]
         }
     ],
     "support_url": "https://salla.com/",
