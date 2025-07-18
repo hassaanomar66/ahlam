@@ -232,10 +232,10 @@
                     "value": "<div style='margin: -24px -20px 20px'><img class='w-full' src='https://cdn.salla.network/images/themes/raed/preview-images/images-slider-enhancement.png?v=1.1'></div>"
                 },
                 {
-                  "type": "static",
-                  "format": "description",
-                  "id": "enhance-slider-note",
-                  "value": "<div style='background-color: #ddedff;color: #0a5a90;padding: 16px 20px;font-size: 14px;border-radius: 4px; margin: 0 0 30px;'>هذا العنصر غير مناسب لعرض البنرات، يمكنك استخدام عنصر <strong>صور متحركة</strong> بدلاً منه لتظهر صورة البنر بشكل كامل</div>"
+                    "type": "static",
+                    "format": "description",
+                    "id": "enhance-slider-note",
+                    "value": "<div style='background-color: #ddedff;color: #0a5a90;padding: 16px 20px;font-size: 14px;border-radius: 4px; margin: 0 0 30px;'>هذا العنصر غير مناسب لعرض البنرات، يمكنك استخدام عنصر <strong>صور متحركة</strong> بدلاً منه لتظهر صورة البنر بشكل كامل</div>"
                 },
                 {
                     "id": "slides",
@@ -1023,6 +1023,13 @@
                     "maxLength": 30
                 }
             ]
+        },
+        {
+            "key": "c23cfb58-a4e8-4a81-bdb9-277ab3bbbd96",
+            "title": "banner2",
+            "icon": "sicon-store",
+            "path": "home.banner_2",
+            "fields": []
         }
     ],
     "support_url": "https://salla.com/",
