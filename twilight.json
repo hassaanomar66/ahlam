@@ -763,8 +763,8 @@
                             "placeholder": "",
                             "description": "* المقاس المناسب للصورة هو 640×427 بكسل",
                             "settings": {
-                                "height": 427,
-                                "width": 640
+                                "height":500,
+                                "width": 500
                             }
                         },
                         {
