@@ -1075,7 +1075,7 @@
                             "type": "string",
                             "format": "image",
                             "label": "Image",
-                            "description": "حجم الصورة 600 *600",
+                            "description": null,
                             "labelHTML": null,
                             "placeholder": "e.g. https://hostname.com/image.png",
                             "icon": "sicon-image",
