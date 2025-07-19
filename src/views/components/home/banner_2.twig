@@ -1,15 +1,19 @@
 <section class="s-block s-block--banners container">
-  <div class="grid {{ component.banners|length <= 3 ? 'md:grid-cols-' ~ component.banners|length : 'md:grid-cols-3 two-row' }} grid-flow-row gap-3 sm:gap-8">
+  <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4 justify-items-center">
     {% for index, banner in component.banners %}
       <a href="{{ banner.url }}"
-         aria-label="{{ banner.title ? banner.title : 'square-banner-' ~ index }}"
-         class="banner-entry lazy {{ banner.title ? 'has-overlay' : '' }} {{ component.banners|length <= 3 ? 'h-lg-banner' : 'h-banner' }}"
-         data-bg="{{ banner.image }}">
+         aria-label="{{ banner.title ? banner.title : 'category-banner-' ~ index }}"
+         class="flex flex-col items-center text-center space-y-3 transition-transform duration-300 hover:scale-105">
          
-        <article class="banner-entry__text text-with-border">
-          <h3 class="banner__title font-bold mb-1 leading-6">{{ banner.title }}</h3>
-          <p class="banner__description">{{ banner.description }}</p>
-        </article>
+        <div class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full overflow-hidden border-2 border-gray-300 shadow-md hover:shadow-lg transition-all duration-300">
+          <img src="{{ banner.image }}" alt="{{ banner.title }}"
+               class="w-full h-full object-cover" loading="lazy" />
+        </div>
+
+        {% if banner.title %}
+          <span class="text-sm font-semibold text-gray-800">{{ banner.title }}</span>
+        {% endif %}
+
       </a>
     {% endfor %}
   </div>
