@@ -1,7 +1,18 @@
-<section class="s-block s-block--fixed-banner wide-placeholder">
-    <div class="container">
-        <a href="{{ url }}" class="banner banner--fixed overflow-hidden" aria-label="Banner {{ image.alt }}">
-            <img width="1200" height="300" src="{{ image.url }}" alt="{{ image.alt|trim ? image.alt : 'fixed banner' }}"/>
-        </a>
-    </div>
+<section class="s-block s-block--default-home-slider s-block--full-bg">
+
+<salla-slider auto-play pagination type="fullwidth">
+
+<div slot="items">
+
+</div>
+
+</salla-slider>
+
 </section>
+
+
+
+{% for banner in component.banner_last %}
+
+{% endfor%}
+
