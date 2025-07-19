@@ -9,26 +9,42 @@
 | position                       | int      | Sorting number start from zero                                               |
 #}
 <section class="s-block s-block--hero-slider s-block--full-bg wide-placeholder"> 
-    <salla-slider 
-      id="main-slider-{{ position }}"
-      auto-play
-      slider-config='{
-        "lazy": "false"
-      }'
-      type="fullwidth">
-        <div slot="items">
-            {% for slide in component.slides %}
-                <div class="swiper-slide w-full min-h-[300px] lg:min-h-[528px] bg-dark relative">
-					<div style="background-image: url({{ slide.image }});" class="overlay-bg bg-cover bg-center absolute inset-0"></div>
-                    
-                    <div class="flex-center container pb-16 sm:pb-0 home-slider__content relative h-full">
-                        <div class=" w-4/6 text-center md:w-7/12 lg:w-5/12 text-white">
-                            <h2 data-swiper-parallax="-500" class="lg:text-title-size font-bold leading-tight mb-4">{{ slide.title }}</h2>
-                            <p data-swiper-parallax="-300" class="line-clamp-2 description">{{ slide.description }}</p>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
+  <salla-slider 
+    id="main-slider-{{ position }}"
+    auto-play
+    slider-config='{ "lazy": "false" }'
+    type="fullwidth">
+    
+    <div slot="items">
+      {% for slide in component.slides %}
+        <div class="swiper-slide w-full relative">
+          <!-- خلفية الصورة -->
+          <div style="
+              background-image: url({{ slide.image }}); 
+              background-size: cover; 
+              background-position: center; 
+              background-repeat: no-repeat;
+              height: 65vh;            /* ارتفاع مرن: 65% من ارتفاع الشاشة */
+              min-height: 300px;       /* أقل ارتفاع للهواتف */
+              max-height: 700px;       /* أقصى ارتفاع للشاشات الكبيرة */
+            " class="overlay-bg absolute inset-0 w-full">
+          </div>
+
+          <!-- محتوى النص داخل السلايدر -->
+          <div class="flex-center container relative z-10 h-full">
+            <div class="w-11/12 sm:w-4/5 md:w-3/5 lg:w-1/2 text-white text-center py-10">
+              <h2 class="text-xl sm:text-2xl md:text-4xl font-bold leading-tight mb-4">
+                {{ slide.title }}
+              </h2>
+              <p class="text-sm sm:text-base md:text-lg line-clamp-2 description">
+                {{ slide.description }}
+              </p>
+            </div>
+          </div>
         </div>
-    </salla-slider>
-</section> 
+      {% endfor %}
+    </div>
+
+  </salla-slider>
+</section>
+
