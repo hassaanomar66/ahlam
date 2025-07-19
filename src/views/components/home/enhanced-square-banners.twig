@@ -15,14 +15,16 @@
     {% for index, banner in component.banners %}
       <a href="{{ banner.url }}"
          aria-label="{{ banner.title ? banner.title : 'category-banner-' ~ index }}"
-         class="banner-entry lazy {{ banner.title ? 'has-overlay' : '' }} {{ component.banners|length <= 3 ? 'h-lg-banner' : 'h-banner' }}"
-         data-bg="{{ banner.image }}"
-         style="aspect-ratio: 1/1; background-size: cover; background-position: center; border-radius: 0.5rem; display: flex; align-items: flex-end; text-decoration: none;">
+         class="block relative overflow-hidden rounded-md">
          
-        <article class="banner-entry__text text-with-border p-4 w-full bg-black bg-opacity-50 text-white rounded-b-md">
-          <h3 class="banner__title font-bold mb-1 leading-6 text-base">{{ banner.title }}</h3>
-          <p class="banner__description text-sm">{{ banner.description }}</p>
-        </article>
+        <img src="{{ banner.image }}" alt="{{ banner.title }}" class="w-full h-full object-cover aspect-square" loading="lazy" />
+
+        {% if banner.title or banner.description %}
+          <article class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-3">
+            <h3 class="font-bold text-sm mb-1">{{ banner.title }}</h3>
+            <p class="text-xs">{{ banner.description }}</p>
+          </article>
+        {% endif %}
 
       </a>
     {% endfor %}
