@@ -1,10 +1,20 @@
-<section class="s-block">
-  {% for item in collection %}
-    {% if item.banner %}
-      <div class="bg-[#0fb0cc] text-white text-center py-3 px-4 rounded-md mb-4">
-        <marquee direction="right">{{ item.banner }}</marquee>
-      </div>
-    {% endif %}
-  {% endfor %}
-</section>
+<div class="angel-ad overflow-hidden" style="background-color: {{ bg_color|default('#4d0c5d') }}">
+    <div class="mask-block">
+        <div class="angel-ad__slider" style="animation-duration: {{ duration|default(15000) }}ms;">
+            {% for item in collection %}
+                {% if item.banner %}
+                    <div class="angel-ad__item" style="color: {{ item.color|default('#ffffff') }}">
+                        <i class="sicon-shipping-fast angel-ad__icon"></i>
+                        <a class="angel-ad__content pointer-events-none" href="{{ item.link|default('#') }}" target="_blank">
+                            {{ item.banner }}
+                        </a>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
 
+    <div class="flex-center absolute h-6 w-6 top-2 end-2 rounded-full">
+        <a href="#" class="w-full h-full flex-center ad-close sicon-cancel text-lg text-red-400" aria-label="close-alert"></a>
+    </div>
+</div>
