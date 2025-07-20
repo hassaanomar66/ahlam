@@ -1095,6 +1095,13 @@
                     "maxLength": 5
                 }
             ]
+        },
+        {
+            "key": "aeec7e6b-1bfd-4b75-b717-a0560df756a3",
+            "title": "tape",
+            "icon": "sicon-store",
+            "path": "home.tape",
+            "fields": []
         }
     ],
     "support_url": "https://salla.com/",
