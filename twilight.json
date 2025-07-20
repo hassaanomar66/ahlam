@@ -867,44 +867,21 @@
             "title": "الماركات التجارية",
             "icon": "sicon-award-ribbon",
             "path": "home.brands",
-            "image": "https://cdn.salla.sa/mQgZlG/kvFhVeuUyjK4nHUovBQBZ632Hb6gKV2BXZwid40e.png",
             "fields": [
                 {
-                    "type": "static",
-                    "format": "description",
-                    "id": "with-bg",
-                    "value": "<div style='margin: -24px -20px 20px'><img class='w-full' src='https://cdn.salla.network/images/themes/raed/preview-images/brands.png?v=1.1'></div>"
-                },
-                {
+                    "id": "string",
                     "type": "string",
-                    "icon": "sicon-format-text-alt",
-                    "label": "العنوان",
-                    "multilanguage": true,
-                    "id": "title",
-                    "required": false,
                     "format": "text",
-                    "description": "",
-                    "placeholder": "أدخل العنوان هنا...",
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "value": {
-                        "ar": "تصفح من خلال العلامات التجارية",
-                        "en": "Browse All Brands"
-                    }
-                },
-                {
-                    "type": "items",
-                    "icon": "sicon-keyboard_arrow_down",
-                    "label": "الماركات التجارية",
-                    "id": "brands",
-                    "format": "dropdown-list",
-                    "description": "",
-                    "selected": [],
-                    "options": [],
+                    "label": "String",
+                    "description": null,
+                    "labelHTML": "<div >   <marquee direction=\"right\">أهلاً بكم في متجرنا! عروض حصرية بانتظاركم</marquee> </div>",
+                    "placeholder": "Placeholder text ..",
+                    "icon": "sicon-format-text-alt",
+                    "value": null,
+                    "multilanguage": true,
                     "required": true,
-                    "multichoice": true,
-                    "searchable": true,
-                    "source": "brands"
+                    "minLength": 6,
+                    "maxLength": 30
                 }
             ]
         },
