@@ -1090,18 +1090,6 @@
                     "icon": "sicon-list-add",
                     "fields": [
                         {
-                            "id": "collection.color",
-                            "type": "string",
-                            "format": "color",
-                            "inputType": "color",
-                            "label": "Color",
-                            "description": null,
-                            "labelHTML": null,
-                            "icon": "sicon-format-fill",
-                            "value": "#0fb0cc",
-                            "required": true
-                        },
-                        {
                             "id": "collection.tap",
                             "type": "string",
                             "format": "text",
@@ -1115,6 +1103,18 @@
                             "required": true,
                             "minLength": 6,
                             "maxLength": 30
+                        },
+                        {
+                            "id": "collection.color",
+                            "type": "string",
+                            "format": "color",
+                            "inputType": "color",
+                            "label": "Color",
+                            "description": null,
+                            "labelHTML": null,
+                            "icon": "sicon-format-fill",
+                            "value": "#0fb0cc",
+                            "required": true
                         }
                     ],
                     "value": [],
